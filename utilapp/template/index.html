@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body %}
+
+<h1 class="container">Welcome to the text analyzer Enter your text below</h1>
+<div class="container">
+    <form action="/analyze" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Enter you text here and let util do the magic</label>
+            <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch">
+            <label class="custom-control-label" for="customSwitch">Remove punc</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" name="fullcaps" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Upper Case</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" name="newline" class="custom-control-input" id="customSwitch2">
+            <label class="custom-control-label" for="customSwitch2">newline Remover</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" name="space" class="custom-control-input" id="customSwitch3">
+            <label class="custom-control-label" for="customSwitch3">Space Remover</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" name="counter" class="custom-control-input" id="customSwitch4">
+            <label class="custom-control-label" for="customSwitch4">Char Counter</label>
+        </div>
+        <button type="submit" class="btn btn-success">Analyze Text</button>
+
+</div>
+
+</form>
+</div>
+{%endblock%}

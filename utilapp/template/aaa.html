@@ -1,0 +1,33 @@
+
+<h1 class="container">Welcome to the text analyzer Enter your text below</h1>
+<div class="container">
+    <form action="/analyze">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Enter you text here and let util do the magic</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+
+        </div>
+
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" name="removepunc" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Remove punctuation</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" name="fullcaps" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">UPPER CASE</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" name="newline" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">New Line Remover</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" name="space" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Space Remover</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Charector Count</label>
+        </div>
+        <button type="button" type="submit" class="btn btn-success">Analyze Text</button>
+    </form>
+</div>
